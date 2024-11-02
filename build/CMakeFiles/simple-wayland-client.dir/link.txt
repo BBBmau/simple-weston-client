@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/simple-wayland-client.dir/simple-wayland-client.c.o -o simple-wayland-client  -lwayland-client 
