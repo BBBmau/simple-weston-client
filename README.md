@@ -1,6 +1,13 @@
 # simple-wayland-client
 this repo is to play around with weston in order to create a compatibilty layer between xg_shell &lt;-> wl_shell
 
+### IMPORTANT
+
+- This repo is only tested on linux, specifically ubuntu 24.04
+- attempts were made to get it working on macos and docker containres but it was not successful.
+- found it much easier to run on native ubuntu 24.04
+- you are able to simple run the application with `./run-weston.sh` and not use docker. You should see the following output:
+![alt text](<Screenshot from 2024-11-04 22-10-04.png>)
 
 ## Build Instructions
 
@@ -13,6 +20,10 @@ docker build -t simple-wayland-client .
 ```
 docker run -it --rm \
     -v "$(pwd):/app" \
+    -v "$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY:$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY" \
+    -v "/dev/dri:/dev/dri" \
+    -e XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR \
+    -e WAYLAND_DISPLAY=$WAYLAND_DISPLAY \
     simple-wayland-client /bin/bash
 ```
 
