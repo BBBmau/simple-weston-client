@@ -1,11 +1,11 @@
-# simnple-wayland-client
+# simple-wayland-client
 this repo is to play around with weston in order to create a compatibilty layer between xg_shell &lt;-> wl_shell
 
 
 ## Build Instructions
 
 ```
-docker build -t simnple-wayland-client .
+docker build -t simple-wayland-client .
 ```
 
 ## Run Instructions
@@ -13,7 +13,7 @@ docker build -t simnple-wayland-client .
 ```
 docker run -it --rm \
     -v "$(pwd):/app" \
-    simnple-wayland-client /bin/bash
+    simple-wayland-client /bin/bash
 ```
 
 ```

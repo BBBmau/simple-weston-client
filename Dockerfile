@@ -18,5 +18,5 @@ RUN apt-get update && \
 WORKDIR /app
 
 # Copy your source files
-COPY simnple-wayland-client.c .
+COPY simple-wayland-client.c .
 COPY CMakeLists.txt . 
